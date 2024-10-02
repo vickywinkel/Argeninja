@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 687d9352d6f2af4478a644945272ddb7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mitad1: {fileID: 300622506293173730, guid: 234599d82e813e44ca2c822625ce5920, type: 3}
+  - mitad2: {fileID: 262392059833128803, guid: 5a37924870c83af48882068dac13cedf, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
