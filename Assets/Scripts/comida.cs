@@ -17,6 +17,7 @@ public class comida : MonoBehaviour
     public float power = 20.0F;   
 
     public bool cortastePlato = false;
+    public GameObject particulas; 
 
     
 
@@ -79,7 +80,11 @@ public class comida : MonoBehaviour
             }
 
         }
-        
+        if (particulas != null)
+        {
+            Instantiate(particulas, transform.position, Quaternion.identity);
+            Debug.Log("particulasssss"); 
+        }
     }
 
     void DestruyoObjeto()
