@@ -136,8 +136,8 @@ MonoBehaviour:
   entera: {fileID: 6014931628967478199}
   puntajeC: 10
   estaCortada: 0
-  radius: 8
-  power: 1500
+  radius: 0
+  power: 0
   cortastePlato: 0
 --- !u!114 &6527639128954961089
 MonoBehaviour:

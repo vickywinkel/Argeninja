@@ -665,7 +665,7 @@ MonoBehaviour:
   - {fileID: 521699231099689022, guid: b97a47826c884164d888ac936813d052, type: 3}
   - {fileID: 6256515416105059461, guid: a9154a4f12f0b8648a04d892de264d1a, type: 3}
   - {fileID: 2528710342915997433, guid: babfc10539f7aef459791eacb584acc3, type: 3}
-  - {fileID: 215910629932065564, guid: 787bb35cf1f57bf49b5a54ec69e9c674, type: 3}
+  - {fileID: 6256515416105059461, guid: b7f072e492e6793489cc0acbbccd830f, type: 3}
   - {fileID: 5351498939036051071, guid: 927aa17daf805654f9c083cfc63b70cd, type: 3}
   comidaAzar: {fileID: 0}
   puntosDisparo:
