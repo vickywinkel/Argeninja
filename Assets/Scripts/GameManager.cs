@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public int puntos;
     public int mayorPuntaje;
 
+    public bool yaToqueBoton = false;
+
    // public GameObject todasLasVidas;
     //public GameObject dosVidas;
     //public GameObject unavida;
@@ -55,6 +57,7 @@ public class GameManager : MonoBehaviour
         if (vidas == 0)
         {
             ChangeScene("Perdiste");
+            yaToqueBoton = false;  
         }
     } 
 

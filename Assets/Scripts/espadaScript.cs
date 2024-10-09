@@ -50,5 +50,6 @@ public class espadaScript : MonoBehaviour
     {
         yield return new WaitForSeconds(tiempoTotal);
         SceneManager.LoadScene("Perdiste");
+        GameManager.Instance.yaToqueBoton = false; 
     }
 }

@@ -17,26 +17,40 @@ public class botonScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (GameManager.Instance.yaToqueBoton == false)
+        {
+            if (gameObject.tag == "creditos")
+            {
+                //SceneManager.LoadScene("creditos");
+                GameManager.Instance.ChangeScene("creditos");
+                Debug.Log("colison");
+            }
+            if (gameObject.tag == "volvermenu")
+            {
+                //SceneManager.LoadScene("creditos");
+                GameManager.Instance.ChangeScene("menu");
+                Debug.Log("colison");
+            }
+            if (gameObject.tag != "ExitHitBox")
+            {
+                GameManager.Instance.yaToqueBoton = true;
+            }
+        }
         if (gameObject.tag == "jugar")
         {
             Debug.Log("colison");
             GameManager.Instance.ChangeScene("juego");
-           // SceneManager.LoadScene("juego");
+            // SceneManager.LoadScene("juego");
             GameManager.Instance.puntos = 0;
-            GameManager.Instance.vidas = 3; 
+            GameManager.Instance.vidas = 3;
 
         }
-        if (gameObject.tag == "creditos")
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (gameObject.tag == "ExitHitBox")
         {
-            //SceneManager.LoadScene("creditos");
-            GameManager.Instance.ChangeScene("creditos");
-            Debug.Log("colison");
-        } 
-        if (gameObject.tag == "volvermenu")
-        {
-            //SceneManager.LoadScene("creditos");
-            GameManager.Instance.ChangeScene("menu");
-            Debug.Log("colison");
+            GameManager.Instance.yaToqueBoton = false;
         }
     }
 }

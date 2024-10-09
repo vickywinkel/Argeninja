@@ -12,6 +12,7 @@ TagManager:
   - jugar
   - creditos
   - volvermenu
+  - ExitHitBox
   layers:
   - Default
   - TransparentFX
