@@ -38,14 +38,28 @@ public class tirarscript : MonoBehaviour
             Debug.Log("freq = 3");
             cuenta.empezoC = false;
         }
-         if (GameManager.Instance.puntos >= 300  && listo == true)
+        if (GameManager.Instance.puntos >= 1000 && listo == true)
+        {
+            freq = 2.5f;
+            Debug.Log("freq = 1");
+            InvokeRepeating(nameof(DispararDeUnPuntoAlAzar), 0, freq);
+            listo = false;
+        }
+        if (GameManager.Instance.puntos >= 700 && listo == false && GameManager.Instance.puntos < 1000)
+        {
+            freq = 4f;
+            Debug.Log("freq = 1");
+            InvokeRepeating(nameof(DispararDeUnPuntoAlAzar), 0, freq);
+            listo = true;
+        }
+        if (GameManager.Instance.puntos >= 250  && listo == true && GameManager.Instance.puntos < 700)
         {
             freq = 2f;
             Debug.Log("freq = 1");
             InvokeRepeating(nameof(DispararDeUnPuntoAlAzar), 0, freq);
             listo = false;
         }
-        else if (GameManager.Instance.puntos >= 120 && GameManager.Instance.puntos < 300  && listo == false)
+        else if (GameManager.Instance.puntos >= 120 && GameManager.Instance.puntos < 250  && listo == false)
         {
             Debug.Log("hola");
             freq2 = 2.5f;

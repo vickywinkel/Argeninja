@@ -35,7 +35,7 @@ public class comida : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "piso")
+         if (collision.gameObject.tag == "piso")
         {
             DestruyoObjeto();
             Debug.Log("pisoo");
