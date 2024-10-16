@@ -59,6 +59,10 @@ public class comida : MonoBehaviour
 
         mitades.SetActive(true);
         entera.SetActive(false);
+        for (int i = 0; i < mitades.transform.childCount; i++)
+        {
+            mitades.transform.GetChild(i).gameObject.layer = 6;
+        }
         estaCortada = true;
         Vector3 explosionPos = transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
