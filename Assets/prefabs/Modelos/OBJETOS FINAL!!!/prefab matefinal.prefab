@@ -139,7 +139,8 @@ MonoBehaviour:
   radius: 80
   power: 200
   cortastePlato: 0
-  particulas: {fileID: 7526126282866447522, guid: 5dd5ba904fe29c545802873e9d2467b3, type: 3}
+  particulas: {fileID: 4446846928398475696, guid: 3c78dd056ffab284abac216fc27d3f08, type: 3}
+  particleHeight: 0.8
 --- !u!114 &6527639128954961089
 MonoBehaviour:
   m_ObjectHideFlags: 0
