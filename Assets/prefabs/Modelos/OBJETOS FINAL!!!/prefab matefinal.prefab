@@ -137,7 +137,7 @@ MonoBehaviour:
   puntajeC: 10
   estaCortada: 0
   radius: 80
-  power: 200
+  power: 100
   cortastePlato: 0
   particulas: {fileID: 4446846928398475696, guid: 3c78dd056ffab284abac216fc27d3f08, type: 3}
   particleHeight: 0.8
