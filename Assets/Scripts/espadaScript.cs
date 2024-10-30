@@ -7,7 +7,11 @@ public class espadaScript : MonoBehaviour
 {
     public float tiempoTotal = 1.5f;
     public float tiempoActual = 0;
-    bool empezo = false;
+    public float safeRange;
+    public Transform espadaTransform;
+    public Transform playerTransform;
+    public float distanciaEspadaPlayer;
+    public bool puedeCortar = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,31 +22,36 @@ public class espadaScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       puedeCortar = IsOutOfSafeRange();
     }
     private void OnCollisionEnter(Collision collision)
     {
         // Comprueba que la colisión es con el objeto deseado 
         comida comidaScript = collision.gameObject.GetComponent<comida>();
 
-        if (collision.gameObject.tag == "Comida")
+        if (IsOutOfSafeRange())
         {
-            comidaScript.CortarFruta();
-            Debug.Log("collision");
-            SoundManager.Instance.PlaySound(SoundManager.Instance.cortarComida);
-            if (comidaScript.estaCortada == true)
+            if (collision.gameObject.tag == "Comida")
             {
-                GameManager.Instance.SumarPuntos(comidaScript.puntajeC);}
-        
-        }
-        if (collision.gameObject.tag == "plato")
-        {
-            SoundManager.Instance.PlaySound(SoundManager.Instance.cortarPlato);
-            comidaScript.CortarFruta();
-            Debug.Log("collision");
+                comidaScript.CortarFruta();
+                Debug.Log("collision");
+                SoundManager.Instance.PlaySound(SoundManager.Instance.cortarComida);
+                if (comidaScript.estaCortada == true)
+                {
+                    GameManager.Instance.SumarPuntos(comidaScript.puntajeC);
+                }
 
-            StartCoroutine(Cuentaregresiva()); 
+            }
+            if (collision.gameObject.tag == "plato")
+            {
+                SoundManager.Instance.PlaySound(SoundManager.Instance.cortarPlato);
+                comidaScript.CortarFruta();
+                Debug.Log("collision");
+
+                StartCoroutine(Cuentaregresiva());
+            }
         }
+        
        
     }
 
@@ -51,5 +60,11 @@ public class espadaScript : MonoBehaviour
         yield return new WaitForSeconds(tiempoTotal);
         SceneManager.LoadScene("Perdiste");
         GameManager.Instance.yaToqueBoton = false; 
+    }
+
+    bool IsOutOfSafeRange()
+    {
+        distanciaEspadaPlayer = Vector3.Distance(espadaTransform.position, playerTransform.position);
+        return distanciaEspadaPlayer > safeRange;
     }
 }
