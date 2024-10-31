@@ -16,7 +16,7 @@ public class espadaScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tiempoTotal = 1.5f;
+        tiempoTotal = 1f;
     }
 
     // Update is called once per frame
