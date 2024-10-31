@@ -42,10 +42,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3193485342489255885}
-  - component: {fileID: 1620944509022057174}
   - component: {fileID: 5088503246360788264}
   - component: {fileID: 5281587834049814080}
   - component: {fileID: -1610715056967225260}
+  - component: {fileID: 4379689958820507802}
   m_Layer: 0
   m_Name: Platoo
   m_TagString: plato
@@ -70,27 +70,6 @@ Transform:
   - {fileID: 3135286571634073186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1620944509022057174
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8804301918317963426}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.289397, y: 0.74866, z: 3.1347685}
-  m_Center: {x: -0.10741975, y: 0.103170335, z: -0.16143663}
 --- !u!54 &5088503246360788264
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -152,6 +131,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoTotal: 1.5
+--- !u!64 &4379689958820507802
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8804301918317963426}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &671523061954064096
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1033,6 +1033,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5533677695596652046, guid: 400eb14a21d4abb438ee02202df3d74d, type: 3}
   m_PrefabInstance: {fileID: 1394725624988123881}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &870416196 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4694433874307897544, guid: 450d3bf54fa20e542b31cf5ea1944108, type: 3}
+  m_PrefabInstance: {fileID: 906266583283716625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &983948024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,6 +2337,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!4 &1973891948 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1150305356281016157, guid: 450d3bf54fa20e542b31cf5ea1944108, type: 3}
+  m_PrefabInstance: {fileID: 906266583283716625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &906266583283716625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2408,6 +2418,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6179270112447299188, guid: 450d3bf54fa20e542b31cf5ea1944108, type: 3}
+      propertyPath: safeRange
+      value: 21.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179270112447299188, guid: 450d3bf54fa20e542b31cf5ea1944108, type: 3}
+      propertyPath: espadaTransform
+      value: 
+      objectReference: {fileID: 1973891948}
+    - target: {fileID: 6179270112447299188, guid: 450d3bf54fa20e542b31cf5ea1944108, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 870416196}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
